@@ -1,14 +1,11 @@
 kind: Pod
 apiVersion: v1
-metadata:
-  name: labels
+metadata: 
+  name: annotations
   labels:
     course: k8
-    trainer: sivakumar
-  annotations:
-    kubernetes.io/created-by: "AkshayKumar"
-    jenkins.build.url: 'https://jenkins.akshaydaws-78s.online/expense/job/backend/54'
-spec:
+    trainer: Sivakumar
+spec: 
   containers:
   - name: nginx
-    image: nginx
+    image:
