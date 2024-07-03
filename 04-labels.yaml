@@ -1,11 +1,11 @@
 kind: Pod
 apiVersion: v1
-metadata: 
+metadata:
   name: labels
   labels:
     course: k8
-    trainer: Sivakumar
-spec: 
+    trainer: sivakumar
+spec:
   containers:
   - name: nginx
-    image:
+    image: nginx
