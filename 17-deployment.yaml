@@ -8,7 +8,7 @@ metadata:
     purpose: deployment
     tier: web
 spec:
-  replicas: 5
+  replicas: 10
   selector:
     matchLabels:
       app: nginx
@@ -25,4 +25,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx
+        image: nginx: stable-perl
