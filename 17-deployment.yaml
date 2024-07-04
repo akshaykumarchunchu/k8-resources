@@ -1,26 +1,27 @@
 kind: Deployment
-apiVersion: app/v1
+apiVersion: apps/v1
 metadata:
   name: nginx
-  # these labels belongs to deployment resource
+  # these labels are deployment related labels
   labels:
     app: nginx
     purpose: deployment
+    tier: web
 spec:
-  # modify replicas according to your case
-  replicas: 3
+  replicas: 5
   selector:
     matchLabels:
-      tier: web
       app: nginx
+      tier: web
       project: test-project
-  # below is pod definition
+  # pod definition
   template:
     metadata:
       labels:
-        tier: web
         app: nginx
+        tier: web
         project: test-project
+        extra-key: extra-value
     spec:
       containers:
       - name: nginx
